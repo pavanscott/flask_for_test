@@ -1,0 +1,97 @@
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h1>REDIRECTION</h1>
+
+<br>
+<a href="{{ url_for('weather') }}">Visit Weather.com!</a>
+<ul class="collection with-header">
+    {% for galaxy in output %}
+        <li class="collection-item">>{{ galaxy }}</li>
+    {% endfor %}
+</ul>
+</body>
+</html> -->
+
+<style>
+    .button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 100px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    .wrapper {
+        text-align: center;
+    }
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+    
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    .topnav a.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    ol li {
+      background: white;
+      padding: 5px;
+      margin-left: 35px;
+      color: green;
+          }
+    .Next {
+       background-color: #4CAF50;
+       border: none;
+       color: white;
+       padding: 15px 32px;
+       text-align: center;
+       text-decoration: none;
+       display: inline-block;
+       font-size: 16px;
+       margin: 50px 50px;
+       cursor: pointer;
+            }       
+
+    </style>
+    
+    <div class="topnav">
+        <h1 align="center"style="color:orange;">WEATHER</h1>
+     </div>
+    </div>
+    </div>
+    <div class="wrapper">
+    <button class="button"onclick="location.href='{{ url_for('weather') }}'">Weather_Reports</button>
+    </div>
+
+    <ol> 
+    {% for i in output %} 
+        <li>{{ i }}</li>
+    {%endfor%}  
+    </ol>
+    <button class="Next"onclick="location.href='{{ url_for('test') }}'">Next</button>
+
+
+    
+
+   
